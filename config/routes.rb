@@ -1,6 +1,7 @@
 PlInfo::Application.routes.draw do
-  get "league_table/home"
-  get "league_table/help"
+  get "pl/table"
+  get "pl/fixtures"
+  get "pl/results"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
