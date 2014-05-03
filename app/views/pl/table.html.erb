@@ -1,5 +1,4 @@
   <%= image_tag 'spacer.gif', :size => '1x1' %>
-
   <div  class="container">
     <table class="table table-striped table-bordered table-hover">
     <thead>
@@ -17,42 +16,20 @@
       </tr>
     </thead>
     <tbody>
+      <% for num in 0..@table.length - 1 do %>
       <tr>
-        <td>1</td>
-        <td>Liverpool</td>
-        <td>36</td>
-        <td>25</td>
-        <td>5</td>
-        <td>6</td>
-        <td>96</td>
-        <td>46</td>
-        <td>50</td>
-        <td>80</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Chelsea</td>
-        <td>36</td>
-        <td>24</td>
-        <td>6</td>
-        <td>6</td>
-        <td>69</td>
-        <td>26</td>
-        <td>43</td>
-        <td>78</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Manchester City</td>
-        <td>35</td>
-        <td>24</td>
-        <td>5</td>
-        <td>6</td>
-        <td>93</td>
-        <td>35</td>
-        <td>58</td>
-        <td>77</td>
-      </tr>
+        <td><%= num + 1 %></td>
+        <td><%= @table[num].team %></td>
+        <td><%= @table[num].play %></td>
+        <td><%= @table[num].win %></td>
+        <td><%= @table[num].draw %></td>
+        <td><%= @table[num].lose %></td>
+        <td><%= @table[num].get_score %></td>
+        <td><%= @table[num].cns_score %></td>
+        <td><%= @table[num].goal_diff %></td>
+        <td><%= @table[num].points %></td>
+      </tr>        
+      <% end %>
     </tbody>
     </table>
   </div>
